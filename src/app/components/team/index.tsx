@@ -43,13 +43,7 @@ const members = [
         name: 'Tiago Tokugi de Albuquerque Massuda',
         role: 'desenvolvedor fornt-end',
         technologies: 'React, Angular, Flutter'
-    },
-    {
-        photo : '',
-        name: 'nome do dev',
-        role: 'desenvolvedor fornt-end',
-        technologies: 'React, Angular, Flutter'
-    },
+    }
 ]
 
 
