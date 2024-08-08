@@ -16,7 +16,7 @@ export function Home() {
         <>
             <Navbar />
             <StarsCanvas />
-            <main className="bg-BLACK bg-no-repeat h-full" style={{ backgroundImage: `url(${LooperGroup})` }}>
+            <main className="bg-black h-full" >
                 <section id="sobre">
                     <p className="text-6xl text-center text-ORANGE">SOBRE NÓS</p>
                     <div className="flex mt-2 items-center justify-center">
@@ -48,7 +48,7 @@ export function Home() {
                     <p className="text-2xl text-center text-white mt-10 mx-20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, sapiente sint possimus architecto maxime laborum voluptate quos, aperiam reprehenderit at quas fugiat iusto quo. Aliquid quisquam vitae quam accusantium tenetur?</p>
                     <Swiper />
                 </section>
-                <section id="esquipe">
+                <section id="equipe">
                     <p className="text-6xl text-center text-ORANGE">EQUIPE</p>
                     <div className="flex mt-2 items-center justify-center">
                         <div className="w-16 h-0.5 bg-white"></div>

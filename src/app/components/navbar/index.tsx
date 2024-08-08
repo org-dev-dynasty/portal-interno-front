@@ -8,7 +8,7 @@ export function Navbar() {
         { name: "Sobre", link: "sobre" },
         { name: "Habilidades", link: "habilidades" },
         { name: "Projetos", link: "projetos" },
-        { name: "Equipe", link: "equipes" },
+        { name: "Equipe", link: "equipe" },
     ];
 
     const [open, setOpen] = useState(false);
@@ -22,7 +22,7 @@ export function Navbar() {
 
     return (
         <nav className=' w-full sticky top-0 left-0 font-viet bg-BLACK  z-50'>
-            <div className='md:flex items-center justify-between bg-china-black py-6 md:px-10 px-7'>
+            <div className='md:flex items-center justify-between bg-china-black py-3 md:px-10 px-7'>
                 {/* logo section */}
                 <div className='font-bold text-2xl cursor-pointer flex items-center gap-1'>
                     <img src={logo} />
@@ -51,7 +51,7 @@ export function Navbar() {
                 </ul>
                 {/* button */}
                 <button
-                    className='btn bg-black text-topaz lg:ml-8 font-light text-2xl rounded-2xl duration-500 lg:static max-lg:hidden py-3 px-6 text-ORANGE'>
+                    className='btn bg-black hover:bg-white text-topaz lg:ml-8 font-light text-2xl rounded-2xl duration-500 lg:static max-lg:hidden py-3 px-6 text-ORANGE'>
                     <Link to={'/login'}>
                         Contato
                     </Link>
