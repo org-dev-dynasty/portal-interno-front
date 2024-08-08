@@ -3,6 +3,7 @@ import { Carousel, CarouselResponsiveOption } from 'primereact/carousel';
 import firstImage from "../../../assets/firstImage.png";
 import cloudLogo from "../../../assets/cloudLogo.png";
 import { useState } from 'react';
+import '../../../index.css';
 
 const products = [
     {
@@ -20,6 +21,29 @@ const products = [
         name: "Projeto 3",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quidem quas itaque minus, maxime libero iusto odio fugiat, modi temporibus dolorem nemo alias natus optio neque aliquid eaque facilis tempora!",
     },
+    {
+        id: 4,
+        name: "Projeto 4",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quidem quas itaque minus, maxime libero iusto odio fugiat, modi temporibus dolorem nemo alias natus optio neque aliquid eaque facilis tempora!",
+    },
+    {
+        id: 5,
+        name: "Projeto 5",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quidem quas itaque minus, maxime libero iusto odio fugiat, modi temporibus dolorem nemo alias natus optio neque aliquid eaque facilis tempora!",
+    },
+    {
+        id: 6,
+        name: "Projeto 6",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quidem quas itaque minus, maxime libero iusto odio fugiat, modi temporibus dolorem nemo alias natus optio neque aliquid eaque facilis tempora!",
+    },
+    {
+        id: 7,
+        name: "Projeto 7",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quidem quas itaque minus, maxime libero iusto odio fugiat, modi temporibus dolorem nemo alias natus optio neque aliquid eaque facilis tempora!",
+    },
+
+
+
 
 
 ]
@@ -29,22 +53,22 @@ export default function Swiper() {
 
     const responsiveOptions: CarouselResponsiveOption[] = [
         {
-            breakpoint: '1400px',
+            breakpoint: '1280px',
             numVisible: 2,
             numScroll: 1
         },
         {
-            breakpoint: '1199px',
-            numVisible: 3,
-            numScroll: 1
-        },
-        {
-            breakpoint: '767px',
+            breakpoint: '1024px',
             numVisible: 2,
             numScroll: 1
         },
         {
-            breakpoint: '575px',
+            breakpoint: '768px',
+            numVisible: 2,
+            numScroll: 1
+        },
+        {
+            breakpoint: '640px',
             numVisible: 1,
             numScroll: 1
         }
@@ -60,18 +84,18 @@ export default function Swiper() {
     const productTemplate = (product: { id: number, name: string, description: string }) => {
         return (
             <>
-                <div className='flex mt-10' >
-                    <button className="w-[55%] mx-auto bg-C-BACKGROUND rounded-2xl m-2 text-center pt-5 px-3 shadow-md shadow-white hover:cursor-pointer duration-500 hover:scale-95" onMouseEnter={() => setActiveIndex(product.id)}
+                <div className='flex mt-10 w-full' >
+                    <button className="w-[80%] max-md:w-[80%] max-sm:w-[90%] mx-auto bg-black rounded-2xl m-2 text-center pt-5 px-3 shadow-md shadow-white hover:cursor-pointer duration-500 hover:scale-95" onMouseEnter={() => setActiveIndex(product.id)}
                         onMouseLeave={() => setActiveIndex(null)}>
                         <div className='relative'>
                             <img src={firstImage} alt={product.name} className="w-[100%] shadow-ORANGE shadow-md object-cover rounded-xl" />
                             <div className='absolute w-full h-full top-0 opacity-0 duration-500 hover:opacity-100 flex justify-center items-center bg-C-BACKGROUND bg-opacity-60 rounded-xl'>
-                                <img src={cloudLogo} alt="Cloud Logo" className='h-20' />
+                                <img src={cloudLogo} alt="Cloud Logo" className='h-14   ' />
                             </div>
                         </div>
-                        <div className='my-5 mx-5'>
-                            <p className="mb-1 text-2xl text-white">{product.name}</p>
-                            <p className="mt-2 mb-2 text-xl text-white">{product.description}</p>
+                        <div className='w-full text-center my-5'>
+                            <p className="mb-1 text-xl text-white">{product.name}</p>
+                            <p className="mt-2 mb-2 text-lg text-white">{product.description}</p>
                             <label style={{ ...labelStyle, opacity: activeIndex === product.id ? 1 : 0 }} className="text-ORANGE font-semibold text-md">{`Ver mais >`}</label>
                         </div>
                     </button>
@@ -82,7 +106,7 @@ export default function Swiper() {
 
     return (
         <div className="card">
-            <Carousel value={products} numScroll={1} numVisible={3} responsiveOptions={responsiveOptions} itemTemplate={productTemplate} className='mx-20' />
+            <Carousel value={products} numScroll={1} numVisible={3} responsiveOptions={responsiveOptions} itemTemplate={productTemplate} className='px-52 max-sm:px-30 max-md:px-20' style={{ '--carousel-nav-next-color': 'white', '--carousel-nav-prev-color': 'white' }} />
         </div>
     )
 }
