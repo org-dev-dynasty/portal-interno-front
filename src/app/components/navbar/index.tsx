@@ -5,16 +5,23 @@ import logo from "../../../assets/logo.png";
 
 export function Navbar() {
     const Links = [
-        { name: "Sobre", link: "/" },
-        { name: "Habilidades", link: "/" },
-        { name: "Projetos", link: "/" },
-        { name: "Equipe", link: "/" },
+        { name: "Sobre", link: "sobre" },
+        { name: "Habilidades", link: "habilidades" },
+        { name: "Projetos", link: "projetos" },
+        { name: "Equipe", link: "equipes" },
     ];
 
     const [open, setOpen] = useState(false);
 
+    const handleScroll = (link: string) => {
+        const section = document.getElementById(link);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
-        <nav className='shadow-md w-full sticky top-0 left-0 font-viet bg-BLACK z-50'>
+        <nav className=' w-full sticky top-0 left-0 font-viet bg-BLACK  z-50'>
             <div className='md:flex items-center justify-between bg-china-black py-6 md:px-10 px-7'>
                 {/* logo section */}
                 <div className='font-bold text-2xl cursor-pointer flex items-center gap-1'>
@@ -27,14 +34,14 @@ export function Navbar() {
                         open ? <XMarkIcon color="white" height={48}/> : <Bars3Icon color="white" height={48}/>
                     }
                 </div>
-                <ul className={`lg:flex lg:items-center lg:pb-0 pb-6 absolute max-lg:my-12 lg:static bg-BLACK bg-opacity-90 lg:z-auto z-[-1] left-0 w-full lg:w-auto lg:pl-0 pl-9 transition-all duration-500 ease-in-out ${open ? 'top-12' : 'top-[-490px]'}`}>
+                <ul className={`lg:flex lg:items-center lg:pb-0 pb-6 absolute max-lg:my-12 lg:static bg-opacity-90 lg:z-auto z-[-1] left-0 w-full lg:w-auto lg:pl-0 pl-9 transition-all duration-500 ease-in-out ${open ? 'top-12' : 'top-[-490px]'}`}>
                     {
                         Links.map((link) => (
                             <li className='lg:ml-8 lg:my-0 my-7 font-extralight text-2xl'>
-                                {link.name !== 'Contato' ? <Link to={link.link} className='text-white
-                                hover:text-yellow-400 duration-500'>{link.name}</Link>
-                                    : <Link to={link.link} className='text-white lg:hidden
-                                hover:text-yellow-400 duration-500'>{link.name}</Link>}
+                                {link.name !== 'Contato' ? <Link to={''} className='text-white
+                                hover:text-yellow-400 duration-500' onClick={() => handleScroll(link.link)}>{link.name}</Link>
+                                    : <Link to={''} className='text-white lg:hidden
+                                hover:text-yellow-400 duration-500' onClick={() => handleScroll(link.link)}>{link.name}</Link>}
                             </li>))
                     }
                     <li className='lg:ml-8 lg:my-0 my-7 font-extralight text-2xl'>

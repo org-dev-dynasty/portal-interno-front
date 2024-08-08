@@ -65,7 +65,7 @@ export default function Swiper() {
                         onMouseLeave={() => setActiveIndex(null)}>
                         <div className='relative'>
                             <img src={firstImage} alt={product.name} className="w-[100%] shadow-ORANGE shadow-md object-cover rounded-xl" />
-                            <div className='absolute w-full h-full top-0 opacity-0 hover:opacity-100 flex justify-center items-center bg-C-BACKGROUND bg-opacity-60 rounded-xl'>
+                            <div className='absolute w-full h-full top-0 opacity-0 duration-500 hover:opacity-100 flex justify-center items-center bg-C-BACKGROUND bg-opacity-60 rounded-xl'>
                                 <img src={cloudLogo} alt="Cloud Logo" className='h-20' />
                             </div>
                         </div>
