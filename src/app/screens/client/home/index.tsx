@@ -4,6 +4,7 @@ import { Navbar } from "../../../components/navbar"
 import firstImage from "../../../../assets/firstImage.png"
 import { Crosshair, Eye, House } from "@phosphor-icons/react"
 import Swiper from "../../../components/carousel"
+import Team from "../../../components/team"
 import LooperGroup from "../../../../assets/LooperGroup2.png"
 import StarsCanvas from "../../../components/starbackground"
 
@@ -98,6 +99,7 @@ export function Home() {
                         <div className="w-16 h-0.5 bg-white"></div>
                     </div>
                     <p className="text-2xl text-center text-white mt-10 mx-20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, sapiente sint possimus architecto maxime laborum voluptate quos, aperiam reprehenderit at quas fugiat iusto quo. Aliquid quisquam vitae quam accusantium tenetur?</p>
+                    <Team />
                     <div>
                         <div className="flex justify-center mt-10">
                             <div className="w-1/5 bg-white rounded-full border-2 border-white shadow-2xl mx-5">
