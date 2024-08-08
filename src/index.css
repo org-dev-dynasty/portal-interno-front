@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.p-carousel-next, .p-carousel-prev {
+    color: white; /* Cor da seta */
+    font-size: 2rem; /* Tamanho opcional para aumentar as setas */
+}
+
+.p-carousel-next:hover, .p-carousel-prev:hover {
+    color: white; /* Mantém a cor branca ao passar o mouse */
+}
