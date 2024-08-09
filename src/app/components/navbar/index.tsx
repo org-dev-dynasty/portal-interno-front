@@ -21,7 +21,7 @@ export function Navbar() {
     };
 
     return (
-        <nav className=' w-full sticky top-0 left-0 font-viet bg-BLACK  z-50'>
+        <nav className=' w-full sticky top-0 left-0 font-viet bg-black  z-50'>
             <div className='md:flex items-center justify-between bg-china-black py-3 md:px-10 px-7'>
                 {/* logo section */}
                 <div className='font-bold text-2xl cursor-pointer flex items-center gap-1'>
