@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home } from "../screens/client/home";
+import { Home } from "../screens/client/portifolio";
 import Error404 from "../screens/client/404";
 import { Login } from "../screens/client/login";
 import { Register } from "../screens/client/register";
