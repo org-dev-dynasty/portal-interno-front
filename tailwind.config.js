@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontSize: {
+        '3xs' : '0.5rem',
+        '2xs' : '0.625rem',
+      },
       boxShadow: {
         '3xl': '0 0 10px rgba(255, 255 ,255, 0.2)',
       },
