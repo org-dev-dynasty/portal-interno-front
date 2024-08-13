@@ -45,31 +45,31 @@ export function Login() {
         <>
             <StarsCanvas />
             <main className="bg-black min-h-screen flex justify-center items-center" >
-                <div className="absolute bg-transparent backdrop-blur-xs border-2 border-solid p-8 rounded-2xl shadow-3xl shadow-white m-2 w-144 h-128" >
-                    <div className="flex justify-center items-center mb-20" >
+                <div className="absolute bg-transparent backdrop-blur-xs border-2 border-solid p-4 rounded-2xl shadow-3xl shadow-white m-2 w-64 h-80 sm:w-112 sm:h-96 lg:w-144 lg:h-128 lg:p-8" >
+                    <div className="flex justify-center items-center mb-10 lg:mb-20" >
                         <img src={LooperGroup} alt="logo" />
                     </div>
                     <form >
-                        <div className="mb-10">
+                        <div className="mb-7 sm:mb-9 lg:mb-10">
                             <FloatLabel>
                             <div className="relative">
                                 <InputText 
                                     onChange={(e) => setEmail(e.target.value)} 
-                                    className="pr-10 text-white w-full h-10 p-2 border-2 shadow-white shadow-sm bg-black rounded-md drop-shadow-md focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" 
+                                    className="pr-10 text-white text-2xs w-full h-6 p-2 border-2 shadow-white shadow-sm bg-black rounded-md drop-shadow-md focus:ring-indigo-500 focus:border-indigo-500 sm:text-xs sm:h-8 lg:text-sm lg:h-10" 
                                     value={email} 
                                 />
                                 <div className="absolute right-3 top-1/2 transform -translate-y-1/2"><i className="pi pi-user" style={{color: 'white'}}></i></div>
                             </div>
-                                <label className="duration-300 block text-sm font-big text-white ml-2" htmlFor="user">Email</label>
+                                <label className="duration-300 block text-xs font-big text-white ml-2 lg:text-sm" htmlFor="user">Email</label>
                             </FloatLabel>
                             <small id="user-help" className={`${emailErr ? "visible" : "hidden"} text-rose-500`}>{emailErr}</small>
                         </div>
-                        <div className="mb-8">
+                        <div className="mb-1 lg:mb-1">
                             <FloatLabel>
                                 <div>
                                     <InputText 
                                         onChange={(e) => setPassword(e.target.value)} 
-                                        className="text-white w-full h-10 p-2 border-2 shadow-white shadow-sm bg-black rounded-md drop-shadow-md focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" 
+                                        className="text-white text-2xs w-full h-6 p-2 border-2 shadow-white shadow-sm bg-black rounded-md drop-shadow-md focus:ring-indigo-500 focus:border-indigo-500 sm:text-xs sm:h-8 lg:text-sm lg:h-10 lg:text-sm" 
                                         id="password" 
                                         type={isVisible ? 'text' : 'password'}
                                         size={30} 
@@ -78,21 +78,23 @@ export function Login() {
                                         <i className={isVisible ? 'pi pi-eye' : 'pi pi-eye-slash'} style={{color: 'white'}}></i>
                                     </div>
                                 </div>
-                                <label className="duration-300 block text-sm font-big text-white ml-2" htmlFor="password">Password</label>
+                                <label className="duration-300 block text-xs font-big text-white ml-2 lg:text-sm" htmlFor="password">Password</label>
                             </FloatLabel>
                             <small id="password-help" className={`${passwordErr ? "visible" : "hidden"} text-rose-500`}>{passwordErr}</small>
                         </div>
                         <div className="relative w-full">
-                            <div className="flex justify-between items-center mt-4">
+                            <div className="flex justify-between items-center mt-0 flex-col-reverse">
                                 <button 
                                     type="button" 
-                                    className="font-medium w-[30%] border-2 shadow-white shadow-3xl text-white ml-4 py-2 rounded-md duration-300 hover:bg-LIGHT_ORANGE focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50" 
+                                    className="text-xs w-[45%] border-2 shadow-white shadow-3xl text-white ml-1 py-2 rounded-md duration-300 mt-5 hover:bg-LIGHT_ORANGE focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 sm:mt-6 lg:ml-4 lg:mt-8 lg:text-sm" 
                                     onClick={RandomLogin}>
                                     Login
                                 </button>
-                                <Link to={'/register'} className="text-LIGHT_ORANGE underline mr-4">
-                                    Forgot my password
-                                </Link>
+                                <div className="flex justify-end w-[100%]">
+                                    <Link to={'/register'} className="text-LIGHT_ORANGE text-xs underline sm:mt-3 lg:mt-0 lg:mr-4 lg:text-sm">
+                                        Forgot my password
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                         {/* <div className="text-center mt-10 ">
