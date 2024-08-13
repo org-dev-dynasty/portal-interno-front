@@ -45,7 +45,7 @@ export function Login() {
         <>
             <StarsCanvas />
             <main className="bg-black min-h-screen flex justify-center items-center" >
-                <div className="absolute bg-transparent backdrop-blur-xs border-2 border-solid p-8 rounded-2xl shadow-3xl shadow-white m-2 w-144 h-144" >
+                <div className="absolute bg-transparent backdrop-blur-xs border-2 border-solid p-8 rounded-2xl shadow-3xl shadow-white m-2 w-144 h-128" >
                     <div className="flex justify-center items-center mb-20" >
                         <img src={LooperGroup} alt="logo" />
                     </div>
@@ -82,13 +82,18 @@ export function Login() {
                             </FloatLabel>
                             <small id="password-help" className={`${passwordErr ? "visible" : "hidden"} text-rose-500`}>{passwordErr}</small>
                         </div>
-                        <div className="flex justify-end mb-8 mr-2">
-                            <Link to={'/register'} className="object-right text-blue-500 underline">
-                                <p>Esqueci minha senha</p>
-                            </Link>
-                        </div>
-                        <div className="flex justify-center">
-                            <button type="button" className="font-medium- mt-4 w-[30%] backdrop-blur-l border-2 shadow-white shadow-3xl text-white py-2 rounded-md duration-300 hover:bg-LIGHT_ORANGE focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50" onClick={RandomLogin}>Login</button>
+                        <div className="relative w-full">
+                            <div className="flex justify-between items-center mt-4">
+                                <button 
+                                    type="button" 
+                                    className="font-medium w-[30%] border-2 shadow-white shadow-3xl text-white ml-4 py-2 rounded-md duration-300 hover:bg-LIGHT_ORANGE focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50" 
+                                    onClick={RandomLogin}>
+                                    Login
+                                </button>
+                                <Link to={'/register'} className="text-LIGHT_ORANGE underline mr-4">
+                                    Forgot my password
+                                </Link>
+                            </div>
                         </div>
                         {/* <div className="text-center mt-10 ">
                             <p className="text-white">Don't have an account? <Link to={'/register'} className="text-blue-500 underline">Register</Link></p>
