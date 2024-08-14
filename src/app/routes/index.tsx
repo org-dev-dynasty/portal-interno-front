@@ -3,7 +3,7 @@ import { Home } from "../screens/client/portifolio";
 import Error404 from "../screens/client/404";
 import { Login } from "../screens/client/login";
 import { Register } from "../screens/client/register";
-import { PortalInterno } from "../screens/client/portalInterno";
+import { PortalInterno } from "../screens/portalInterno/home";
 
 
 
@@ -15,7 +15,9 @@ export default function AppRoutes() {
                 <Route path={"/"} element={<Home/>} />
                 <Route path={"/login"} element={<Login/>} />
                 <Route path={"/register"} element={<Register/>} />
-                <Route path={"/portalInterno"} element={<PortalInterno/>} />
+                <Route path={"/portalInterno/home"} element={<PortalInterno/>} />
+                <Route path={"/portalInterno/projects"} element={<PortalInterno/>} />
+                
             </Routes>
         </BrowserRouter>
     );
