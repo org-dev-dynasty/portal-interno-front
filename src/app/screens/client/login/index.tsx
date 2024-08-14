@@ -18,13 +18,6 @@ export function Login() {
     const [password, setPassword] = useState("")
 
     useEffect(() => {
-        async function loginVerify() {
-            const response = localStorage.getItem('token');
-            if (response) {
-                navigate('/portalInterno');
-            }
-        }
-        loginVerify();
         setEmail("")
         setPassword("")
     }, [])
@@ -50,6 +43,14 @@ export function Login() {
             navigate('/portalInterno')
         }
 
+        async function loginVerify() {
+            const response = localStorage.getItem('token');
+            if (response) {
+                navigate('/portalInterno');
+            }
+        }
+        loginVerify();
+
     }
 
 
@@ -67,7 +68,7 @@ export function Login() {
                             <FloatLabel>
                             <div className="relative">
                                 <InputText 
-                                    onChange={(e) => setEmail(e.target.value)} 
+                                    onChange={(e) => { setEmail(e.target.value); setEmailErr(""); }}
                                     className="pr-10 text-white text-2xs w-full h-6 p-2 border-2 shadow-white shadow-sm bg-black rounded-md drop-shadow-md focus:ring-indigo-500 focus:border-indigo-500 sm:text-xs sm:h-8 lg:text-sm lg:h-10" 
                                     value={email} 
                                 />
@@ -81,7 +82,7 @@ export function Login() {
                             <FloatLabel>
                                 <div>
                                     <InputText 
-                                        onChange={(e) => setPassword(e.target.value)} 
+                                        onChange={(e) => { setPassword(e.target.value); setPasswordErr(""); }}
                                         className="text-white text-2xs w-full h-6 p-2 border-2 shadow-white shadow-sm bg-black rounded-md drop-shadow-md focus:ring-indigo-500 focus:border-indigo-500 sm:text-xs sm:h-8 lg:text-sm lg:h-10 lg:text-sm" 
                                         id="password" 
                                         type={isVisible ? 'text' : 'password'}
