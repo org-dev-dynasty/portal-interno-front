@@ -1,9 +1,14 @@
+import Header from "../../../components/header";
+
 
 
 export function PortalInterno() {
     return (
-        <div>
-            <h1>Portal Interno</h1>
-        </div>
+        <>
+            <Header/>
+            <div className="bg-black h-full">
+                <p>Hello Worlld</p>
+            </div>
+        </>
     )
 }
