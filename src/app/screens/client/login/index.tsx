@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ClientContext } from "../../../context/client_context";
 import LooperGroup from "../../../../assets/logo.png";
 import { FloatLabel } from 'primereact/floatlabel';
@@ -7,11 +7,9 @@ import StarsCanvas from "../../../components/starbackground"
 import { InputText } from "primereact/inputtext";
 import 'primeicons/primeicons.css';
         
-        
-
-
+    
 export function Login() {
-
+    const navigate = useNavigate();
     const [emailErr, setEmailErr] = useState("");
     const [passwordErr, setPasswordErr] = useState("");
     const [isVisible, setIsVisible] = useState(false)
@@ -19,7 +17,20 @@ export function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("")
 
-    async function RandomLogin() {
+    useEffect(() => {
+        async function loginVerify() {
+            const response = localStorage.getItem('token');
+            if (response) {
+                navigate('/portalInterno');
+            }
+        }
+        loginVerify();
+        setEmail("")
+        setPassword("")
+    }, [])
+
+
+    async function HandleLogin() {
         setEmailErr("")
         setPasswordErr("")
         if(email === "" && password === ""){
@@ -32,13 +43,15 @@ export function Login() {
         } 
 
         const response = await signIn(email, password)
-        console.log(response)
+        console.log('RESPONSEEEE', response)
+        if (response) {
+            alert('Login efeutuado com sucesso')
+            localStorage.setItem('token', response.token)
+            navigate('/portalInterno')
+        }
+
     }
 
-    useEffect(() => {
-        setEmail("")
-        setPassword("")
-    }, [])
 
 
     return (
@@ -87,7 +100,7 @@ export function Login() {
                                 <button 
                                     type="button" 
                                     className="text-xs w-[45%] border-2 shadow-white shadow-3xl text-white ml-1 py-2 rounded-md duration-300 mt-5 hover:bg-LIGHT_ORANGE focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 sm:mt-6 lg:ml-4 lg:mt-8 lg:text-sm" 
-                                    onClick={RandomLogin}>
+                                    onClick={HandleLogin}>
                                     Login
                                 </button>
                                 <div className="flex justify-end w-[100%]">
