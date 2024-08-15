@@ -1,7 +1,6 @@
 import { GridFour, ListDashes, Plus } from "@phosphor-icons/react";
 import Header from "../../../components/header";
 import ProjectCard from "../../../components/projectCard";
-import "./styles.css";
 
 
 
