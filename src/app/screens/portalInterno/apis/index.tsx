@@ -1,6 +1,8 @@
-import DashboardLayout from '../../../components/header2';
+import DashboardLayout from "../../../components/header2";
 
-export default function PortalInterno() {
+
+
+export function Apis() {
     return (
         <>
             <DashboardLayout>

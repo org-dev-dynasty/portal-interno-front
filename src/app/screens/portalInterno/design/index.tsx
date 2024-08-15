@@ -1,6 +1,9 @@
-import DashboardLayout from '../../../components/header2';
+import DashboardLayout from "../../../components/header2";
 
-export default function PortalInterno() {
+
+
+
+export function Desing() {
     return (
         <>
             <DashboardLayout>
@@ -12,4 +15,4 @@ export default function PortalInterno() {
 
         </>
     );
-}
+}   

@@ -6,6 +6,11 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'gradient-to-R': 'linear-gradient(to right, #262626, #111111)',
+        'gradient-to-L': 'linear-gradient(to right, #111111, #262626 )',
+        // Adicione mais gradientes personalizados aqui
+      },
       fontSize: {
         '3xs' : '0.5rem',
         '2xs' : '0.625rem',

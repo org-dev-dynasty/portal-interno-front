@@ -5,7 +5,7 @@ import ProjectCard from "../../../components/projectCard";
 
 
 export function Projects() {
-    return ( 
+    return (
         <>
             <Header/>
             <main className="bg-black h-[91.2vh]">
