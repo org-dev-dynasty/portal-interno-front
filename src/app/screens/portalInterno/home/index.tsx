@@ -1,14 +1,15 @@
-import Header from "../../../components/header";
+import DashboardLayout from '../../../components/header2';
 
-
-
-export function PortalInterno() {
+export default function PortalInterno() {
     return (
         <>
-            <Header/>
-            <div className="bg-black h-screen">
-                <p>Hello Worlld</p>
-            </div>
+            <DashboardLayout>
+                <div>
+                    HelloWorls
+                </div>
+            </DashboardLayout>
+            
+
         </>
-    )
+    );
 }
