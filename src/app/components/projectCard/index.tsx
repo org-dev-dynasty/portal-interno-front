@@ -19,6 +19,69 @@ const projects = [
         'routes': 5,
         'design': 4,
     },
+    {
+        'title': 'Projeto Web',
+        'type': 'Ecomerce',
+        'progress': 50,
+        'timeRemaining': 'Três', 
+        'participants': [{'photo': 'https://avatars.githubusercontent.com/u/100361837?v=4'},{ 'photo': 'https://avatars.githubusercontent.com/u/133998521?v=4'}, {'photo': 'https://avatars.githubusercontent.com/u/137533443?s=400&u=0efea3b4a507cca23808ca58819a66acd8e240aa&v=4'}],
+        'routes': 5,
+        'design': 4,
+    },
+    {
+        'title': 'Projeto Web',
+        'type': 'multiplataform',
+        'progress': 50,
+        'timeRemaining': 'Três', 
+        'participants': [{'photo': 'https://avatars.githubusercontent.com/u/100361837?v=4'},{ 'photo': 'https://avatars.githubusercontent.com/u/133998521?v=4'}, {'photo': 'https://avatars.githubusercontent.com/u/137533443?s=400&u=0efea3b4a507cca23808ca58819a66acd8e240aa&v=4'}],
+        'routes': 5,
+        'design': 4,
+    },
+    {
+        'title': 'Projeto Web',
+        'type': 'Mobile',
+        'progress': 50,
+        'timeRemaining': 'Três',
+        'participants': [{'photo': 'https://avatars.githubusercontent.com/u/100361837?v=4'},{ 'photo': 'https://avatars.githubusercontent.com/u/133998521?v=4'}, {'photo': 'https://avatars.githubusercontent.com/u/137533443?s=400&u=0efea3b4a507cca23808ca58819a66acd8e240aa&v=4'}],
+        'routes': 5,
+        'design': 4,
+    },
+    {
+        'title': 'Projeto Web',
+        'type': 'Web',
+        'progress': 50,
+        'timeRemaining': 'Três', 
+        'participants': [{'photo': 'https://avatars.githubusercontent.com/u/100361837?v=4'},{ 'photo': 'https://avatars.githubusercontent.com/u/133998521?v=4'}, {'photo': 'https://avatars.githubusercontent.com/u/137533443?s=400&u=0efea3b4a507cca23808ca58819a66acd8e240aa&v=4'}],
+        'routes': 5,
+        'design': 4,
+    },
+    {
+        'title': 'Projeto Web',
+        'type': 'multiplataform',
+        'progress': 50,
+        'timeRemaining': 'Três', 
+        'participants': [{'photo': 'https://avatars.githubusercontent.com/u/100361837?v=4'},{ 'photo': 'https://avatars.githubusercontent.com/u/133998521?v=4'}, {'photo': 'https://avatars.githubusercontent.com/u/137533443?s=400&u=0efea3b4a507cca23808ca58819a66acd8e240aa&v=4'}],
+        'routes': 5,
+        'design': 4,
+    },
+    {
+        'title': 'Projeto Web',
+        'type': 'Mobile',
+        'progress': 50,
+        'timeRemaining': 'Três',
+        'participants': [{'photo': 'https://avatars.githubusercontent.com/u/100361837?v=4'},{ 'photo': 'https://avatars.githubusercontent.com/u/133998521?v=4'}, {'photo': 'https://avatars.githubusercontent.com/u/137533443?s=400&u=0efea3b4a507cca23808ca58819a66acd8e240aa&v=4'}],
+        'routes': 5,
+        'design': 4,
+    },
+    {
+        'title': 'Projeto Web',
+        'type': 'Web',
+        'progress': 50,
+        'timeRemaining': 'Três', 
+        'participants': [{'photo': 'https://avatars.githubusercontent.com/u/100361837?v=4'},{ 'photo': 'https://avatars.githubusercontent.com/u/133998521?v=4'}, {'photo': 'https://avatars.githubusercontent.com/u/137533443?s=400&u=0efea3b4a507cca23808ca58819a66acd8e240aa&v=4'}],
+        'routes': 5,
+        'design': 4,
+    },
 ]
 
 function chooseIcon (icon: string) {
@@ -41,10 +104,10 @@ export default function ProjectCard() {
     const projectTemplate = (project: { title: string, type: string,progress: number, timeRemaining: string, participants: {photo: string}[], routes: number, design: number }) => {
         return (
             <>
-                <div className="relative  py-1">
-                    <div className="bg-BLACK shadow-3xl shadow-white border-2 border-solid rounded-lg w-96 h-64 m-10 p-6">
+                <div className="relative py-1">
+                    <div className="hover:cursor-pointer bg-BLACK shadow-3xl shadow-white border-2 border-solid rounded-lg w-80 h-64 m-10 p-6">
                         <div className={`${chooseIcon(project.type)[1]} absolute flex right-5 top-5 w-24 h-24  rounded-full`}>{chooseIcon(project.type)[0]}</div>
-                        <h2 className="text-white font-sans font-thin text-2xl">{project.title}</h2>
+                        <h2 className="text-white font-sans font-thin text-2xl hover:underline underline-offset-2">{project.title}</h2>
                         <div className="mt-4 mb-4 space-y-1">
                             <div className="flex text-white space-x-2">
                                 <Crosshair size={28} />
@@ -88,7 +151,7 @@ export default function ProjectCard() {
 
 
     return (
-        <div className="flex justify-center flex-wrap">
+        <div className="flex flex-wrap">
             {projects.map((project, index) => (
                 <div key={index}>
                     {projectTemplate(project)}
