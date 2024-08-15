@@ -1,15 +1,13 @@
-import Header from "../../../components/header";
+import DashboardLayout from "../../../components/header2";
 
 
 
 export function Projects() {
-    return ( 
+    return (
         <>
-            <Header/>
-            <main className="bg-black h-screen">
-                <p className="text-white bg-red-500">Hello</p>
+            <DashboardLayout>
 
-            </main>
+            </DashboardLayout>
         </>
     )
 }
