@@ -2,12 +2,17 @@ import DashboardLayout from "../../../components/header2";
 
 
 
-export function Projects() {
+
+export function Desing() {
     return (
         <>
             <DashboardLayout>
-
+                <div>
+                    HelloWorls
+                </div>
             </DashboardLayout>
+            
+
         </>
-    )
-}
+    );
+}   

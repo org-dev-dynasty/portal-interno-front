@@ -1,12 +1,11 @@
 import DashboardLayout from "../../../components/header2";
 
 
-
-export function Projects() {
+export function Members() {
     return (
         <>
             <DashboardLayout>
-
+        
             </DashboardLayout>
         </>
     )
