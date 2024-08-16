@@ -12,7 +12,7 @@ export function Projects() {
           >
             <h1 className="text-white font-thin text-[64px] ">Projetos</h1>
             <button className="flex rounded-lg w-16 h-16 bg-ORANGE mt-auto mb-auto right-4 justify-center items-center hover:bg-LIGHT_ORANGE duration-300">
-              <Plus size={50} />
+              <Plus size={50} color="white"/>
             </button>
           </div>
           <div className="grid my-2 ">
@@ -55,7 +55,7 @@ export function Projects() {
             </div>
           </div>
           <div className="relative flex h-10 w-full bg-gradient-to-t from-white to-transparent rounded-b-3xl justify-center">
-            <div className="absolute w-[99.3%] h-9 bg-BLACK rounded-b-3xl " />
+            <div className="absolute w-[99.7%] bottom-[0.1rem] h-10 bg-black rounded-b-3xl " />
           </div>
           <div className="relative justify-start h-[70%] overflow-y-auto p-6">
             <div className="custom-scrollbar h-full w-full">
