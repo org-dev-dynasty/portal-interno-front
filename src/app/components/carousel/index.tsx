@@ -84,7 +84,7 @@ export default function Swiper() {
     const productTemplate = (product: { id: number, name: string, description: string }) => {
         return (
             <>
-                <div className='flex mt-10 w-full' >
+                <div className='flex mt-5 w-full' >
                     <button className="w-[80%] max-md:w-[80%] max-sm:w-[90%] mx-auto bg-black rounded-2xl m-2 text-center pt-5 px-3 shadow-md shadow-white hover:cursor-pointer duration-500 hover:scale-95" onMouseEnter={() => setActiveIndex(product.id)}
                         onMouseLeave={() => setActiveIndex(null)}>
                         <div className='relative'>
