@@ -26,7 +26,7 @@ export default function DashboardLayout({ children }: any) {
     return (
         <div className="flex h-screen bg-[#111111] text-gray-300">
             {/* Menu Lateral */}
-            <div className={`bg-gradient-to-R w-60 p-5 flex flex-col space-y-4 ${isMenuOpen ? 'block' : 'hidden'} md:block max-sm:absolute sm:top-0 h-full`}>
+            <div className={`bg-gradient-to-R w-60 p-5 flex flex-col space-y-4 ${isMenuOpen ? 'block' : 'hidden'} md:block max-sm:absolute sm:top-0 h-full z-50 shadow-r-lg shadow-3xl`}>
                 <div className="flex items-center mb-12 gap-5">
                     <div className="text-ORANGE">
                         <img src={Logo} alt="" className='cursor-pointer' />
