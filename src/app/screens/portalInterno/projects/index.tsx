@@ -54,8 +54,8 @@ export function Projects() {
               </div>
             </div>
           </div>
-          <div className="relative p-1 h-10 w-full bottom-0 left-0 bg-gradient-to-t from-white to-transparent rounded-b-3xl">
-            <div className="absolute bottom-1 w-[99.3%] h-9 bg-BLACK rounded-b-3xl" />
+          <div className="relative flex h-10 w-full bg-gradient-to-t from-white to-transparent rounded-b-3xl justify-center">
+            <div className="absolute w-[99.3%] h-9 bg-BLACK rounded-b-3xl " />
           </div>
           <div className="relative justify-start h-[70%] overflow-y-auto p-6">
             <div className="custom-scrollbar h-full w-full">
