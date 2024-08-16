@@ -24,7 +24,7 @@ export function Navbar() {
         <nav className=' w-full sticky top-0 left-0 font-viet bg-black  z-50'>
             <div className='md:flex items-center justify-between bg-china-black py-3 md:px-10 px-7'>
                 {/* logo section */}
-                <div className='font-bold text-2xl cursor-pointer flex items-center gap-1'>
+                <div className='cursor-pointer flex items-center gap-1'>
                     <img src={logo} />
                 </div>
                 {/* Menu icon */}
@@ -37,7 +37,7 @@ export function Navbar() {
                 <ul className={`lg:flex lg:items-center lg:pb-0 pb-6 absolute max-lg:my-12 lg:static bg-opacity-90 lg:z-auto z-[-1] left-0 w-full lg:w-auto lg:pl-0 pl-9 transition-all duration-500 ease-in-out ${open ? 'top-12' : 'top-[-490px]'}`}>
                     {
                         Links.map((link) => (
-                            <li className='lg:ml-8 lg:my-0 my-7 font-extralight text-2xl'>
+                            <li className='lg:ml-8 lg:my-0 my-7 font-extralight text-xl'>
                                 {link.name !== 'Contato' ? <Link to={''} className='text-white
                                 hover:text-yellow-400 duration-500' onClick={() => handleScroll(link.link)}>{link.name}</Link>
                                     : <Link to={''} className='text-white lg:hidden
