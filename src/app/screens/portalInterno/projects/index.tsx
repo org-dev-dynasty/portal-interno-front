@@ -18,7 +18,7 @@ export function Projects() {
           <div className="grid my-2 ">
             <hr className="w-[96%] justify-self-center" />
           </div>
-          <div className="flex px-8 w-full justify-between border-white border-b-2 rounded-b-xl pb-3  ">
+          <div className="flex px-8 w-full justify-between border-white border-b-2 rounded-b-2xl pb-3  ">
             <div className="flex space-x-[10%]">
               <div className="flex items-center">
                 <p className="text-white font-thin text-2xl">Todos</p>
