@@ -8,20 +8,20 @@ export function Projects() {
       <DashboardLayout>
         <main className="bg-transparent h-[90vh]">
           <div
-            className={`flex content-center px-10 pt-6  justify-between w-full`}
+            className={`flex content-center px-10 pt-6  justify-between w-full `}
           >
-            <h1 className="text-white font-thin text-[64px] ">Projetos</h1>
-            <button className="flex rounded-lg w-16 h-16 bg-ORANGE mt-auto mb-auto right-4 justify-center items-center hover:bg-LIGHT_ORANGE duration-300">
-              <Plus size={50} color="white"/>
+            <h1 className="text-white font-thin text-4xl ">Projetos</h1>
+            <button className="flex rounded-lg w-10 h-10 bg-ORANGE mt-auto mb-auto right-4 justify-center items-center hover:bg-LIGHT_ORANGE duration-300">
+              <Plus size={24} color="white"/>
             </button>
           </div>
           <div className="grid my-2 ">
             <hr className="w-[96%] justify-self-center" />
           </div>
-          <div className="flex px-8 w-full justify-between">
+          <div className="flex px-8 w-full justify-between border-white border-b-2 rounded-b-xl pb-3  ">
             <div className="flex space-x-[10%]">
               <div className="flex items-center">
-                <p className="text-white font-thin text-[32px]">Todos</p>
+                <p className="text-white font-thin text-2xl">Todos</p>
                 <input
                   id="checked-checkbox"
                   type="checkbox"
@@ -29,7 +29,7 @@ export function Projects() {
                 />
               </div>
               <div className="flex items-center">
-                <p className="text-white font-thin text-[32px]">Iniciados</p>
+                <p className="text-white font-thin text-2xl">Iniciados</p>
                 <input
                   id="checked-checkbox"
                   type="checkbox"
@@ -37,7 +37,7 @@ export function Projects() {
                 />
               </div>
               <div className="flex items-center">
-                <p className="text-white font-thin text-[32px]">Finalizados</p>
+                <p className="text-white font-thin text-2xl">Finalizados</p>
                 <input
                   id="checked-checkbox"
                   type="checkbox"
@@ -54,9 +54,9 @@ export function Projects() {
               </div>
             </div>
           </div>
-          <div className="relative flex h-10 w-full bg-gradient-to-t from-white to-transparent rounded-b-3xl justify-center">
-            <div className="absolute w-[99.7%] bottom-[0.1rem] h-10 bg-black rounded-b-3xl " />
-          </div>
+          {/* <div className="relative flex h-12 w-full bg-gradient-to-t   from-white to-transparent rounded-b-3xl justify-center">
+            <div className="absolute w-[99.7%] bottom-[0.1rem] h-10 bg-black rounded-b-3xl" />
+          </div> */}
           <div className="relative justify-start h-[70%] overflow-y-auto p-6">
             <div className="custom-scrollbar h-full w-full">
               <ProjectCard />
