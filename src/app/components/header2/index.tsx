@@ -26,7 +26,7 @@ export default function DashboardLayout({ children }: any) {
     return (
         <div className="flex h-screen bg-[#111111] text-gray-300">
             {/* Menu Lateral */}
-            <div className={`bg-gradient-to-R w-60 p-5 flex flex-col space-y-4 ${isMenuOpen ? 'block' : 'hidden'} md:block max-sm:absolute sm:top-0 h-full z-50 shadow-r-lg shadow-3xl`}>
+            <div className={`bg-gradient-to-R w-60 p-5 flex flex-col space-y-4 ${isMenuOpen ? 'block' : 'hidden'} md:block max-sm:absolute sm:top-0 h-full z-50 max-sm:shadow-r-lg max-sm:shadow-3xl`}>
                 <div className="flex items-center mb-12 gap-5">
                     <div className="text-ORANGE">
                         <img src={Logo} alt="" className='cursor-pointer' />
@@ -54,7 +54,7 @@ export default function DashboardLayout({ children }: any) {
                         <SignOut size={24} className="mr-3" />
                         Sair da Conta
                     </p>
-                    <div className='border-2 w-[60%] max-sm:w-[80%]  border-white mt-2'></div>
+                    <div className='border-2 max-sm:w-[80%]  border-white mt-2'></div>
                 </button>
             </div>
 
@@ -83,7 +83,7 @@ export default function DashboardLayout({ children }: any) {
                     </div>
                 </div>
 
-                <div className="bg-gradient-to-L flex items-center justify-between p-5 hidden md:flex">
+                <div className="bg-gradient-to-L items-center justify-between p-5 hidden md:flex">
                     <div className="flex items-center w-1/2 mx-auto max-md:hidden">
                         <MagnifyingGlass size={32} className="text-gray-400 mr-2" />
                         <input
