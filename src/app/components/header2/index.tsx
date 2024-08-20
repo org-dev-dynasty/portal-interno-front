@@ -54,7 +54,7 @@ export default function DashboardLayout({ children }: any) {
                         <SignOut size={24} className="mr-3" />
                         Sair da Conta
                     </p>
-                    <div className='border-2 w-[60%] max-sm:w-[80%]  border-white mt-2'></div>
+                    <div className='border-2 max-sm:w-[80%]  border-white mt-2'></div>
                 </button>
             </div>
 
