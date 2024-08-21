@@ -18,7 +18,7 @@ export default function DashboardLayout({ children }: any) {
         { name: 'Membros', icon: <Users size={24} />, path: '/portalInterno/members' },
     ];
 
-    function handleLogout() { 
+    function handleLogout() {
         localStorage.removeItem('token');
         navigate('/login');
     }
@@ -31,7 +31,7 @@ export default function DashboardLayout({ children }: any) {
                     <div className="text-ORANGE">
                         <img src={Logo} alt="" className='cursor-pointer' />
                     </div>
-                    <button className='lg:hidden' onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                    <button className='lg:hidden md:hidden' onClick={() => setIsMenuOpen(!isMenuOpen)}>
                         <X size={24} />
                     </button>
                 </div>
@@ -41,7 +41,7 @@ export default function DashboardLayout({ children }: any) {
                             key={index}
                             to={item.path}
                             className={`flex items-center p-2 rounded-md transition-colors 
-                ${location.pathname === item.path ? ' text-white' : 'hover:bg-ORANGE hover:text-white'}`}
+                ${location.pathname === item.path ? ' text-white bg-ORANGE' : 'hover:bg-ORANGE hover:text-white'}`}
                         >
                             {item.icon}
                             <span className="ml-3">{item.name}</span>
@@ -49,7 +49,7 @@ export default function DashboardLayout({ children }: any) {
                         <div className='border-2 border-white'></div>
                     </>
                 ))}
-               <button className="absolute bottom-4 left-5 w-[13%] max-sm:w-full" onClick={handleLogout}>
+                <button className="absolute bottom-4 left-5 w-[13%] max-sm:w-full" onClick={handleLogout}>
                     <p className="flex items-center p-2 rounded-md hover:bg-red-500 hover:text-white transition-colors">
                         <SignOut size={24} className="mr-3" />
                         Sair da Conta
@@ -108,7 +108,7 @@ export default function DashboardLayout({ children }: any) {
                     </div>
                 </div>
 
-                <div className="flex-1 bg-black rounded-tl-3xl   border-2 border-t-ORANGE border-l-ORANGE border-r-0 border-b-0 max-sm:border-0 rounded-none ">
+                <div className="flex-1 bg-black rounded-tl-3xl  border-2 border-t-ORANGE border-l-ORANGE border-r-0 border-b-0 max-md:border-0 max-md:rounded-none max-sm:border-0 rounded-none ">
                     {children}
                 </div>
             </div>
