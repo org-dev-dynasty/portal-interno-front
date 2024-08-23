@@ -204,8 +204,8 @@ export default function ProjectCard() {
 
     return (
       <>
-        <div className="relative py-1">
-          <div className="hover:cursor-pointer bg-BLACK shadow-3xl shadow-white border-2 border-solid rounded-lg w-76 h-64 m-9 p-4">
+        <div className="relative pt-1">
+          <div className="hover:cursor-pointer bg-BLACK shadow-3xl shadow-white border-2 border-solid rounded-lg w-72 h-64 m-9 p-4">
             <div
               className={`${chooseIcon(project.type)[1]} absolute flex right-5 top-5 w-20 h-20 rounded-full duration-150 hover:scale-[.94]`}
             >
@@ -262,7 +262,7 @@ export default function ProjectCard() {
                   </div>
                 )}
               </div>
-              <div className="flex space-x-6">
+              <div className="flex space-x-3">
                 <div className="">
                   <h2 className="text-white font-sans font-thin text-md">
                     Rotas:{" "}
