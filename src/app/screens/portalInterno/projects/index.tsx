@@ -40,7 +40,7 @@ export function Projects() {
                   <input
                     id="checked-checkbox"
                     type="checkbox"
-                    className="appearance-none w-6 h-6 sm:w-8 sm:h-8 bg-black border-white rounded dark:focus:ring-orange-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-black dark:border-white dark:border-2 ml-2 checked:bg-ORANGE checked:border-transparent hover:cursor-pointer"
+                    className="appearance-none w-6 h-6 sm:w-8 sm:h-8 bg-gray-100 border-white rounded dark:focus:ring-orange-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-black dark:border-white dark:border-2 ml-2 checked:bg-ORANGE checked:border-transparent hover:cursor-pointer"
                   />
                 </div>
                 <div className="flex items-center">
@@ -64,7 +64,7 @@ export function Projects() {
                   />
                 </div>
               </div>
-              <div className="flex space-x-4 mt-4 sm:mt-0 items-center">
+              <div className="flex justify-between  sm:space-x-4 mt-4 sm:mt-0 items-center">
                 <div className="flex w-8 h-8 bg-black border-2 border-ORANGE rounded-sm hover:cursor-pointer hover:border-LIGHT_ORANGE justify-center items-center duration-150">
                   <GridFour size={26} color="white" />
                 </div>
